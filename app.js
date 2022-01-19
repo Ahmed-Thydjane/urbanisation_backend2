@@ -38,9 +38,9 @@ const sign_up=require('./sign_up');
 const checkLogin=require('./checkLogin');
 const sign_up_advertiser=require('./sign_up_advertiser');
 const sign_up_admin=require('./sign_up_admin');
-/*
 const add_new_movie=require('./add_new_movie');
 const add_new_playlist=require('./add_new_playlist');
+/*
 const getAllUsers = require('./getAllUsers');
 const getAllPlaylists = require('./getAllPlaylists');
 const update_password = require('./update_password');
@@ -54,20 +54,19 @@ const getOnePlaylist=require('./getOnePlaylist');*/
     =                                    ROUTES                                            =
     ======================================================================================== */
     
-app.post('/sign_in',(req,res) => {sign_up.sign_up(req,res)});
 
 app.post('/sign_up',(req,res) => {sign_up.sign_up(req,res)})
 
 app.post('/sign_up_advertiser',(req,res) => {sign_up_advertiser.sign_up_advertiser(req,res)});
 
 app.post('/sign_up_admin',(req,res) => {sign_up_admin.sign_up_admin(req,res)});
-/*
+
 app.post('/checkLogin',(req,res) => {checkLogin.checklogin(req,res)});
 
 app.post('/add_new_movie',(req,res) => {add_new_movie.add_new_movie(req,res)});
 
 app.post('/add_new_playlist',(req,res) => {add_new_playlist.add_new_playlist(req,res)});
-
+/*
 app.post('/getAllUsers',(req,res) => {getAllUsers.getAllUsers(req,res)});
 
 app.post('/getAllPlaylists',(req,res) => {getAllPlaylists.getAllPlaylists(req,res)});
