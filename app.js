@@ -2,7 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const mongoose=require('mongoose');
+const cookieParser = require('cookie-parser');
+const bodyparser=require('body-parser');
 
+app.use(cookieParser());
+app.use(bodyparser.json());
 
 app.use(cors({origin:'*',credentials: true}));
 app.use(express.json());
