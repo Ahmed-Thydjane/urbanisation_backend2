@@ -4,7 +4,6 @@ const app = express();
 const mongoose=require('mongoose');
 
 
-
 app.use(cors({origin:'*',credentials: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
