@@ -3,12 +3,8 @@ const cors = require("cors");
 const app = express();
 const mongoose=require('mongoose');
 
-var corsOptions = {
-  origin: "*",credentials: true
-};
 
-
-app.use(cors(corsOptions));
+app.use(cors({origin:'*',credentials: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
