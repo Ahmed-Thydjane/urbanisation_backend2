@@ -40,10 +40,11 @@ const sign_up_advertiser=require('./sign_up_advertiser');
 const sign_up_admin=require('./sign_up_admin');
 const add_new_movie=require('./add_new_movie');
 const add_new_playlist=require('./add_new_playlist');
-/*
+
 const getAllUsers = require('./getAllUsers');
 const getAllPlaylists = require('./getAllPlaylists');
 const update_password = require('./update_password');
+/*
 const modifyPermission=require('./modifyPermission');
 const getAllAds=require('./getAllAds');
 const addAd=require('./addAd');
@@ -66,13 +67,13 @@ app.post('/checkLogin',(req,res) => {checkLogin.checklogin(req,res)});
 app.post('/add_new_movie',(req,res) => {add_new_movie.add_new_movie(req,res)});
 
 app.post('/add_new_playlist',(req,res) => {add_new_playlist.add_new_playlist(req,res)});
-/*
+
 app.post('/getAllUsers',(req,res) => {getAllUsers.getAllUsers(req,res)});
 
 app.post('/getAllPlaylists',(req,res) => {getAllPlaylists.getAllPlaylists(req,res)});
 
 app.post('/update_password',(req,res) => {update_password.update_password(req,res)});
-
+/*
 app.post('/modifyPermission',(req,res) => {modifyPermission.modifyPermission(req,res)});
 
 app.post('/getAllAds',(req,res) => {getAllAds.getAllAds(req,res)});
