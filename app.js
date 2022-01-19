@@ -48,7 +48,7 @@ const update_password = require('./update_password');
 const modifyPermission=require('./modifyPermission');
 // const getAllAds=require('./getAllAds');
 
-const addAd=require('./addAd');
+//const addAd=require('./addAd');
 const getOnePlaylist=require('./getOnePlaylist');
 
 
@@ -77,9 +77,9 @@ app.post('/update_password',(req,res) => {update_password.update_password(req,re
 
 app.post('/modifyPermission',(req,res) => {modifyPermission.modifyPermission(req,res)});
 
-app.post('/getAllAds',(req,res) => {getAllAds.getAllAds(req,res)});
+//app.post('/getAllAds',(req,res) => {getAllAds.getAllAds(req,res)});
 
-app.post('/addAd',(req,res) => {addAd.addAd(req,res)});
+//app.post('/addAd',(req,res) => {addAd.addAd(req,res)});
 
 app.post('/getOnePlaylist',(req,res) => {getOnePlaylist.getOnePlaylist(req,res)});
 
