@@ -17,7 +17,20 @@ app.use(express.urlencoded({ extended: true }));
 const db_url='mongodb+srv://cheick:3AXse281qibWcFVL@cluster0.f51yr.mongodb.net/vhome?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 3000;
 
+/*La connection se fait avec ORM mongoose */
 
+mongoose
+  .connect(db_url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("Connected to the database!");
+  })
+  .catch(err => {
+    console.log("Cannot connect to the database!", err);
+    process.exit();
+  });
 
 
 //*Chemin des routes
@@ -69,7 +82,6 @@ app.post('/addAd',(req,res) => {addAd.addAd(req,res)});
 
 app.post('/getOnePlaylist',(req,res) => {getOnePlaylist.getOnePlaylist(req,res)});
 
-/*La connection se fait avec ORM mongoose */
-mongoose.connect(db_url,{UseNewUrlParser: true})
-.then((result)=>app.listen(PORT, ()=>console.log("**** db connected then connection on socket :",PORT)))
-.catch((err)=>console.log(err)) ;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
