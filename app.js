@@ -32,6 +32,21 @@ mongoose
   });
 
 
+//*Chemin des routes
+
+const getAllUsers = require('./getAllUsers');
+
+
+
+/*  ========================================================================================
+    =                                    ROUTES                                            =
+    ======================================================================================== */
+    
+
+
+app.post('/getAllUsers',(req,res) => {getAllUsers.getAllUsers(req,res)});
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
